@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'none'; base-uri 'none'; form-action 'self'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="index, follow">
+  <title>DOCX alt text checker: find missing or generic image descriptions — Preflight A11y</title>
+  <meta name="description" content="How to check alt text in a Word document, what makes alt text useful, and what a browser-only DOCX preflight can detect without uploading the file.">
+  <link rel="canonical" href="https://huhu954.github.io/preflight-a11y/guides/docx-alt-text-checker.html">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../index.html" aria-label="Preflight A11y home"><span class="brand-mark" aria-hidden="true">PA</span><span>Preflight A11y</span></a>
+      <nav aria-label="Main">
+        <a href="../index.html#how">How it works</a>
+        <a href="index.html" aria-current="page">Guides</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="https://github.com/huhu954/preflight-a11y" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="shell article-wrap article">
+    <p class="kicker">DOCX alt text</p>
+    <h1>DOCX alt text checker: find missing or generic image descriptions</h1>
+    <p class="article-meta">By Preflight A11y · 29 October 2026 · 5 minute read</p>
+
+    <p>Alt text is one of the most common document accessibility failures, and one of the easiest to fake. An image can have “alt text” and still be useless if the description is “image1.png” or “chart”.</p>
+
+    <p>This guide explains what to check in a Word document and what a browser-based DOCX preflight can detect.</p>
+
+    <div class="callout">
+      <p><strong>Purpose, not pixels.</strong> Describe what the image communicates in this document. A decorative divider should be marked decorative, not described. A chart should convey the takeaway.</p>
+    </div>
+
+    <h2>Where alt text lives in DOCX</h2>
+    <p>Right-click an image → <strong>Edit Alt Text</strong>. Word stores the description in the drawing properties. The Accessibility Checker can flag images without alt text, but it cannot judge whether the description is meaningful.</p>
+
+    <h2>What good alt text looks like</h2>
+    <table>
+      <thead><tr><th>Image type</th><th>Weak</th><th>Better</th></tr></thead>
+      <tbody>
+        <tr><td>Photo of a classroom</td><td>“image”</td><td>“Students working in pairs at a science lab bench.”</td></tr>
+        <tr><td>Bar chart</td><td>“chart”</td><td>“Completion rose from 62% in week 1 to 84% in week 6.”</td></tr>
+        <tr><td>Decorative divider</td><td>“orange line”</td><td>Mark as decorative.</td></tr>
+        <tr><td>Logo linked to home</td><td>“logo”</td><td>“Example University home” (if the link purpose is not already clear).</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Five checks after adding alt text</h2>
+    <ol>
+      <li>No image has an empty description unless it is truly decorative.</li>
+      <li>No description is just a file name, “image”, “picture”, “logo”, or “chart”.</li>
+      <li>Descriptions are specific to the document’s context, not copied across every image.</li>
+      <li>Charts include the takeaway, not only the chart type.</li>
+      <li>Complex diagrams have a short alt text plus a longer explanation nearby.</li>
+    </ol>
+
+    <h2>What a DOCX preflight can detect</h2>
+    <p>A browser preflight can count images, flag missing descriptions, and flag generic/filename-like descriptions. It cannot see the image, so it cannot know whether the description is accurate. It also cannot verify whether a decorative image was correctly marked as decorative.</p>
+
+    <h2>Why browser-only matters</h2>
+    <p>Course documents may contain unpublished content or student information. A browser-only checker parses the file locally; there is no upload endpoint. That reduces the data-processing surface, but it does not remove the need to use approved, non-confidential files for testing.</p>
+
+    <div class="article-cta">
+      <h2>Check a DOCX for alt-text issues</h2>
+      <p>Free, browser-only, no upload. Maximum 15 MB. Use a synthetic file first.</p>
+      <p><a href="../index.html">Open the scanner →</a></p>
+    </div>
+
+    <h2>Sources</h2>
+    <ul class="source-list">
+      <li>W3C, <a href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html" rel="noopener">1.1.1 Non-text Content</a>.</li>
+      <li>Microsoft Support, <a href="https://support.microsoft.com/en-us/accessibility/office-accessibility/improve-accessibility-with-the-accessibility-checker" rel="noopener">Accessibility Checker</a>.</li>
+      <li>WebAIM, <a href="https://webaim.org/techniques/alttext/" rel="noopener">Alternative Text</a>.</li>
+    </ul>
+
+    <p class="micro">Disclosure: this page is published by the maker of Preflight A11y. It is not legal advice. Menu names vary by Word version.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preflight A11y · research prototype · 2026</p>
+      <p><a href="../index.html">Scanner</a> · <a href="index.html">Guides</a> · <a href="../privacy.html">Privacy</a></p>
+    </div>
+  </footer>
+</body>
+</html>
