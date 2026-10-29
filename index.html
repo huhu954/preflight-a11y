@@ -20,6 +20,14 @@
   <title>Preflight A11y — Document accessibility preflight for course teams</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"Is Preflight A11y a compliance certificate?","acceptedAnswer":{"@type":"Answer","text":"No. It is an automated preflight, not a certification or legal advice. A human must still review meaning, reading order and screen-reader behaviour."}},
+    {"@type":"Question","name":"Does Preflight A11y upload my document?","acceptedAnswer":{"@type":"Answer","text":"No. The public static build parses DOCX and PPTX files in the browser. There is no upload endpoint or server-side storage."}},
+    {"@type":"Question","name":"Does Preflight A11y support PDF?","acceptedAnswer":{"@type":"Answer","text":"Not yet. The current version covers DOCX and PPTX. PDF requires separate tagging, reading-order and form checks."}},
+    {"@type":"Question","name":"How much does Preflight A11y cost?","acceptedAnswer":{"@type":"Answer","text":"It is free during the research pilot. Payment is not enabled; a $19 per report or $49 for five files price is a test hypothesis, not a validated price."}}
+  ]}
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -168,6 +176,35 @@
           <p>It cannot certify WCAG/ADA/EAA compliance, judge whether alt text is meaningful, test screen-reader pronunciation, or remediate the file. A manual review is still required. This is not legal advice.</p>
         </div>
       </div>
+    </section>
+
+    <section class="shell faq" id="faq" aria-labelledby="faq-title">
+      <p class="kicker">Questions</p>
+      <h2 id="faq-title">Before you scan a real file</h2>
+      <details>
+        <summary>Is this a compliance certificate?</summary>
+        <p>No. It is an automated preflight. It cannot establish WCAG, ADA, EAA, or Section 508 conformance, and it is not legal advice. A human still needs to review meaning, reading order, and screen-reader behaviour.</p>
+      </details>
+      <details>
+        <summary>Do you upload my document?</summary>
+        <p>No. The public static build parses the DOCX/PPTX in your browser with JSZip. There is no upload endpoint and no server-side storage. The separate local Python build can use a local Ollama model; it is not part of this static site.</p>
+      </details>
+      <details>
+        <summary>Does it support PDF?</summary>
+        <p>Not yet. This version covers DOCX and PPTX. PDF has different requirements (tags, reading order, bookmarks, form labels), so do not treat a DOCX preflight as a PDF audit.</p>
+      </details>
+      <details>
+        <summary>Can I use the report with a client?</summary>
+        <p>The report is generated locally and you can download it. It is a free research preview, provided as-is, without a warranty or a certification claim. If you need a manual review or a white-label agency report, use the pilot request link.</p>
+      </details>
+      <details>
+        <summary>Is the public version using AI?</summary>
+        <p>The public browser build uses a rules engine plus a template summary; it does not call a cloud LLM. The local Python build can generate an AI summary with a local Ollama model. No document text is sent to a third-party AI API in either build.</p>
+      </details>
+      <details>
+        <summary>How much does it cost?</summary>
+        <p>Nothing during the research pilot. Payment is not enabled. The planned test price, if the pilot proves useful, is $19 per report or $49 for five files; that is a hypothesis, not a validated price.</p>
+      </details>
     </section>
 
     <section class="shell pricing" id="pricing">

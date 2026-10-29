@@ -576,3 +576,19 @@ nav a:hover { color: var(--ink); }
 .guide-card:hover { border-color: var(--accent); }
 .guide-card h2 { font-size: 1.35rem; margin-bottom: 4px; }
 .guide-card p { margin: 0; color: var(--muted); font-size: 0.92rem; }
+
+/* FAQ */
+.faq { padding: clamp(36px, 6vw, 64px) 0; }
+.faq h2 { max-width: 18ch; }
+.faq details {
+  border-top: 1px solid var(--line);
+  padding: 14px 0;
+}
+.faq details:last-of-type { border-bottom: 1px solid var(--line); }
+.faq summary {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.02rem;
+}
+.faq summary:hover { color: var(--accent); }
+.faq details p { margin: 10px 0 0; color: var(--muted); max-width: 72ch; }
