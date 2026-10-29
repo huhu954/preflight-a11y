@@ -1,0 +1,49 @@
+# Preflight A11y
+
+> Free, browser-only accessibility preflight for DOCX and PPTX course documents. It finds detectable issues, explains fixes, and produces a downloadable report. It is not a compliance certification and does not remediate files.
+
+Canonical: https://huhu954.github.io/preflight-a11y/
+Last updated: 2026-10-29
+Language: English
+Author: independent developer (Weilan Hao)
+
+## What it does
+
+- Parses DOCX and PPTX locally in the browser with JSZip; files are not uploaded.
+- Checks document title, language, heading structure, slide titles, alt-text presence and quality signals, table header rows, ambiguous links, text boxes, hidden slides, tiny text, tracked changes, comments, and embedded media that needs captions.
+- Produces a 0–100 preflight score, findings grouped by critical/serious/moderate/minor, WCAG 2.1/2.2 references, plain-English impact, fix instructions, and a downloadable standalone HTML report.
+- Supports DOCX and PPTX up to 15 MB.
+
+## What it does not do
+
+- It is not a certification, audit opinion, or legal advice.
+- It cannot establish WCAG, ADA, EAA, or Section 508 conformance.
+- It cannot judge whether alt text is meaningful or verify screen-reader pronunciation/reading order.
+- It does not cover PDF.
+- It does not remediate or edit the source file.
+
+## Who it is for
+
+- Accessibility consultants and agencies doing a first pass before a manual audit or remediation quote.
+- Course teams, instructional designers, and L&D teams preparing DOCX/PPTX course materials.
+- Not for confidential student records; use synthetic or client-approved files.
+
+## Key pages
+
+- [Free scanner](https://huhu954.github.io/preflight-a11y/)
+- [For accessibility agencies](https://huhu954.github.io/preflight-a11y/agencies.html)
+- [DOCX accessibility checker: what Microsoft misses](https://huhu954.github.io/preflight-a11y/guides/docx-accessibility-checker.html)
+- [PowerPoint accessibility checklist](https://huhu954.github.io/preflight-a11y/guides/powerpoint-accessibility-checklist.html)
+- [Section 508 course documents](https://huhu954.github.io/preflight-a11y/guides/section-508-course-documents.html)
+- [Preflight vs audit](https://huhu954.github.io/preflight-a11y/guides/accessibility-preflight-vs-audit.html)
+- [Privacy](https://huhu954.github.io/preflight-a11y/privacy.html)
+- [Source code](https://github.com/huhu954/preflight-a11y)
+
+## Commercial status
+
+Free research preview. Payment is not enabled. A $19 per report / $49 for five files price is a test hypothesis, not a validated price. There are no customer testimonials, orders, or revenue claims on this site.
+
+## Contact
+
+Public issue form: https://github.com/huhu954/preflight-a11y/issues/new?template=pilot.yml
+Do not post confidential documents or personal data in a public issue.
