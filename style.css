@@ -509,3 +509,5 @@ nav a:hover { color: var(--ink); }
 @media (max-width: 900px) {
   .feedback { grid-template-columns: 1fr; }
 }
+.demo-link { font-size: 0.9rem; margin: 10px 0 0; }
+.demo-link span { color: var(--muted); font-size: 0.8rem; }
