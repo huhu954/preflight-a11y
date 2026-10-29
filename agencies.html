@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'none'; base-uri 'none'; form-action 'self'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="index, follow">
+  <title>For accessibility agencies — Preflight A11y</title>
+  <meta name="description" content="A browser-only DOCX/PPTX preflight for accessibility consultancies: triage client files before a manual audit or remediation quote. Free research pilot.">
+  <link rel="canonical" href="https://huhu954.github.io/preflight-a11y/agencies.html">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html" aria-label="Preflight A11y home"><span class="brand-mark" aria-hidden="true">PA</span><span>Preflight A11y</span></a>
+      <nav aria-label="Main">
+        <a href="index.html#how">How it works</a>
+        <a href="guides/index.html">Guides</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="shell article-wrap article">
+    <p class="kicker">For accessibility agencies</p>
+    <h1>Stop doing the first pass by hand.</h1>
+    <p class="lede">Preflight A11y gives your team a fast, consistent first pass on client DOCX and PPTX files — before a manual audit, a remediation quote, or a scope call.</p>
+
+    <div class="callout">
+      <p><strong>Free research pilot.</strong> Scan one client-safe file in the browser, review the report, and tell us what is missing. No account, no upload, no payment. Not a certification and not a replacement for your manual audit.</p>
+    </div>
+
+    <h2>Where it fits in an agency workflow</h2>
+    <table>
+      <thead><tr><th>Stage</th><th>What Preflight A11y does</th><th>What your team still does</th></tr></thead>
+      <tbody>
+        <tr><td>Intake</td><td>Flags missing titles, heading structure, alt text, table headers, ambiguous links, text boxes, hidden slides, tiny text, tracked changes.</td><td>Confirm scope, sample, and client-specific standard.</td></tr>
+        <tr><td>Estimate</td><td>Gives a severity-based worklist and a repeatable report format.</td><td>Estimate manual remediation effort and price.</td></tr>
+        <tr><td>Audit</td><td>Provides a preflight appendix and a fix list.</td><td>Manual screen-reader testing, reading-order judgement, PDF checks.</td></tr>
+        <tr><td>Remediation</td><td>Nothing — it does not edit files.</td><td>Fix the DOCX/PPTX/PDF and re-test.</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Why browser-only matters</h2>
+    <p>Client course files can contain unpublished content, student information, or licensed material. The public build parses files in the browser; there is no upload endpoint and no server-side storage. That makes it easier to run a quick preflight without adding another vendor to your data-processing review.</p>
+
+    <h2>What the report contains</h2>
+    <ul>
+      <li>A 0–100 preflight score (a sorting aid, not a compliance grade).</li>
+      <li>Findings grouped by critical, serious, moderate, and minor.</li>
+      <li>Location, WCAG reference, plain-English impact, and a fix instruction.</li>
+      <li>A downloadable standalone HTML report you can attach to an internal ticket.</li>
+      <li>A limitations section that states what automation cannot verify.</li>
+    </ul>
+
+    <h2>What it is not</h2>
+    <p>It is not a certification, a legal opinion, or a remediation service. It does not cover PDF, and it cannot judge whether alt text is meaningful or whether reading order makes sense to a person. Use it to triage and scope; keep your manual audit as the evidence layer.</p>
+
+    <h2>Try the pilot</h2>
+    <p>Open the scanner, use a synthetic or client-approved file, and send feedback through the public issue form. If you want to discuss a white-label or agency workflow, use the same form and say “agency pilot”.</p>
+    <p><a class="btn btn-primary" href="index.html" style="width:auto;">Open the scanner</a> <a class="btn btn-secondary" href="https://github.com/huhu954/preflight-a11y/issues/new?template=pilot.yml" rel="noopener" style="margin-left:8px;">Request an agency pilot</a></p>
+
+    <div class="article-cta">
+      <h2>What we want to learn</h2>
+      <p>Which checks are missing, what a usable client report looks like, and whether a preflight actually saves your team time. If it does not, we would rather know now.</p>
+    </div>
+
+    <p class="micro">Preflight A11y is a research prototype, not a law firm or an accessibility certification body. No client names, testimonials, or revenue claims are used on this page.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preflight A11y · research prototype · 2026</p>
+      <p><a href="index.html">Scanner</a> · <a href="guides/index.html">Guides</a> · <a href="privacy.html">Privacy</a></p>
+    </div>
+  </footer>
+</body>
+</html>
