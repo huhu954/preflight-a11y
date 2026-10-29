@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'none'; base-uri 'none'; form-action 'self'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="index, follow">
+  <title>Accessibility preflight vs audit: what should you buy? — Preflight A11y</title>
+  <meta name="description" content="Preflight, audit, remediation, certification: what each one actually delivers for DOCX and PPTX course documents, and how to avoid buying a scanner and calling it compliance.">
+  <link rel="canonical" href="https://huhu954.github.io/preflight-a11y/guides/accessibility-preflight-vs-audit.html">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../index.html" aria-label="Preflight A11y home"><span class="brand-mark" aria-hidden="true">PA</span><span>Preflight A11y</span></a>
+      <nav aria-label="Main">
+        <a href="../index.html#how">How it works</a>
+        <a href="index.html" aria-current="page">Guides</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="https://github.com/huhu954/preflight-a11y" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="shell article-wrap article">
+    <p class="kicker">Buying accessibility work</p>
+    <h1>Accessibility preflight vs audit: what should you buy?</h1>
+    <p class="article-meta">By Preflight A11y · 29 October 2026 · 6 minute read</p>
+
+    <p>“We need an accessibility audit” often means one of four different purchases: a preflight, an audit, remediation, or a certification. They have different scopes, different evidence, and very different prices. Confusing them is how teams end up with a clean scanner report and an inaccessible course.</p>
+
+    <div class="callout">
+      <p><strong>Rule of thumb:</strong> preflight is triage; audit is evidence; remediation is the fix; certification is a claim made by a qualified third party. A scanner is not any of the last three.</p>
+    </div>
+
+    <h2>The four deliverables</h2>
+    <table>
+      <thead><tr><th>Deliverable</th><th>Question it answers</th><th>Typical output</th><th>What it does not prove</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Preflight</strong></td><td>Which files likely have critical barriers, and where should we start?</td><td>Scored list, severity, locations, fix hints, owner</td><td>Full conformance or a legal defence</td></tr>
+        <tr><td><strong>Audit</strong></td><td>Does this document meet the agreed standard, and what is the evidence?</td><td>Sampled manual tests, screen-reader notes, WCAG mapping, exceptions</td><td>That future edits will stay accessible</td></tr>
+        <tr><td><strong>Remediation</strong></td><td>Can you fix the file and return an accessible version?</td><td>Updated DOCX/PPTX/PDF plus a change log</td><td>That the fix is complete without a re-test</td></tr>
+        <tr><td><strong>Certification / VPAT</strong></td><td>Can a qualified party attest to conformance?</td><td>Signed report or vendor conformance report</td><td>That your course files are covered</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Why preflight is worth doing first</h2>
+    <p>A preflight is cheap and fast. It answers the scheduling question: do we have three critical files or three hundred? It also gives an instructional designer a concrete worklist before an expert’s time is spent on manual testing.</p>
+    <p>For DOCX and PPTX, a useful preflight checks document title, language, heading structure, slide titles, alt-text presence and quality signals, table headers, ambiguous links, text boxes, hidden slides, tiny text, tracked changes, comments, and embedded media. That is enough to separate “quick fix” from “needs a specialist”.</p>
+
+    <h2>When a preflight is not enough</h2>
+    <p>Buy an audit when the document is part of a procurement, a legal response, a public-facing course, or a recurring template that many people will use. An audit should include manual testing, not just a scanner:</p>
+    <ul>
+      <li>Keyboard-only navigation of interactive content.</li>
+      <li>Screen-reader spot checks (VoiceOver, NVDA, or JAWS) on representative files.</li>
+      <li>Reading-order and alt-text quality review by a person.</li>
+      <li>Caption/transcript review for technical vocabulary and names.</li>
+      <li>PDF tag/reading-order checks if the PDF is the deliverable.</li>
+    </ul>
+
+    <h2>When remediation is the right purchase</h2>
+    <p>If the file is the deliverable and the team does not have the skills or time to fix it, buy remediation. Ask for the updated file, a change log, and a re-test. “We ran a scanner” is not remediation.</p>
+
+    <h2>What about a VPAT?</h2>
+    <p>A VPAT is a vendor’s conformance report for a product, usually for procurement. It is not a document-level audit of your syllabus, slide deck, or PDF. If a supplier sends a VPAT, ask which version, which standard, which product version, and which exceptions apply.</p>
+
+    <h2>Questions to ask a vendor</h2>
+    <ol>
+      <li>What standard and version are you testing against (WCAG 2.0, 2.1, 2.2; A/AA)?</li>
+      <li>Which parts are automated, and which are manual?</li>
+      <li>Do you test with a screen reader? Which one?</li>
+      <li>What is the sampling method for a 100-file course?</li>
+      <li>What do you deliver: findings only, fixed files, or both?</li>
+      <li>What do you explicitly <em>not</em> cover?</li>
+      <li>Will you re-test after remediation?</li>
+      <li>Are you calling the result “compliant” or “preflighted”?</li>
+    </ol>
+
+    <h2>Where Preflight A11y fits</h2>
+    <p><a href="../index.html">Preflight A11y</a> is the first line: a free browser-only preflight for DOCX and PPTX. It produces a scored report with locations, severity, WCAG references, and fix hints. It is designed to make an audit or remediation quote more accurate, not to replace either.</p>
+    <p>It does not cover PDF, does not fix files, and does not certify conformance. If you need an audit or remediation, use the report as the scope document and ask the vendor the questions above.</p>
+
+    <div class="article-cta">
+      <h2>Start with a free preflight</h2>
+      <p>No upload, no account, no payment. DOCX and PPTX, up to 15 MB.</p>
+      <p><a href="../index.html">Open the scanner →</a></p>
+    </div>
+
+    <h2>Sources</h2>
+    <ul class="source-list">
+      <li>W3C, <a href="https://www.w3.org/WAI/test-evaluate/" rel="noopener">Evaluating Web Accessibility</a> (manual and automated evaluation).</li>
+      <li>W3C, <a href="https://www.w3.org/WAI/WCAG22/Understanding/" rel="noopener">Understanding WCAG 2.2</a>.</li>
+      <li>U.S. Department of Justice, <a href="https://www.ada.gov/resources/web-guidance/" rel="noopener">Guidance on Web Accessibility and the ADA</a>.</li>
+      <li>U.S. Access Board, <a href="https://www.access-board.gov/ict/" rel="noopener">ICT Accessibility Standards</a>.</li>
+    </ul>
+
+    <p class="micro">Disclosure: this guide is published by the maker of Preflight A11y. It is not legal advice. Procurement and legal requirements vary; confirm with your accessibility officer or counsel.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preflight A11y · research prototype · 2026</p>
+      <p><a href="../index.html">Scanner</a> · <a href="index.html">Guides</a> · <a href="../privacy.html">Privacy</a></p>
+    </div>
+  </footer>
+</body>
+</html>
