@@ -1,0 +1,45 @@
+name: Pilot request
+description: Ask about a paid/manual report or a white-label pilot. This issue is public.
+title: "Pilot request: "
+labels: ["pilot"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is a public issue. Do **not** include student records, unpublished course files, identity documents, or other confidential data.
+  - type: input
+    id: role
+    attributes:
+      label: Your role
+      placeholder: Accessibility consultant / instructional designer / agency / other
+    validations:
+      required: true
+  - type: textarea
+    id: usecase
+    attributes:
+      label: What do you need?
+      description: DOCX/PPTX preflight, manual review, white-label reports, or something else.
+    validations:
+      required: true
+  - type: input
+    id: volume
+    attributes:
+      label: Rough volume
+      placeholder: e.g. 20 documents per quarter
+  - type: dropdown
+    id: budget
+    attributes:
+      label: Would you pay for a manual review?
+      options:
+        - Not sure yet
+        - Yes, around $19 per report
+        - Yes, around $49 per report
+        - Yes, monthly/agency plan
+        - No, free only
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Confirmation
+      options:
+        - label: I understand this issue is public and contains no confidential data.
+          required: true
