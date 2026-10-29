@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'none'; base-uri 'none'; form-action 'self'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="index, follow">
+  <title>Section 508 document checklist: Word, PowerPoint, PDF — Preflight A11y</title>
+  <meta name="description" content="A practical Section 508 document checklist for Word, PowerPoint, and PDF: what to check, what automation can verify, and what needs a manual test.">
+  <link rel="canonical" href="https://huhu954.github.io/preflight-a11y/guides/section-508-document-checklist.html">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../index.html" aria-label="Preflight A11y home"><span class="brand-mark" aria-hidden="true">PA</span><span>Preflight A11y</span></a>
+      <nav aria-label="Main">
+        <a href="../index.html#how">How it works</a>
+        <a href="index.html" aria-current="page">Guides</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="https://github.com/huhu954/preflight-a11y" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="shell article-wrap article">
+    <p class="kicker">Section 508 documents</p>
+    <h1>Section 508 document checklist: Word, PowerPoint, PDF</h1>
+    <p class="article-meta">By Preflight A11y · 29 October 2026 · 7 minute read</p>
+
+    <p>This is a practical checklist for teams that need to hand over accessible Word, PowerPoint, or PDF files. It separates what an automated preflight can check from what a person must verify.</p>
+
+    <div class="callout">
+      <p><strong>Scope note:</strong> Section 508 applies to U.S. federal agencies and the ICT they procure, develop, maintain, or use. Universities, contractors, and private organisations may also be covered by Section 504, the ADA, procurement terms, or state law. This checklist is not legal advice.</p>
+    </div>
+
+    <h2>1. Word (DOCX) checklist</h2>
+    <table>
+      <thead><tr><th>Item</th><th>What to verify</th><th>How</th></tr></thead>
+      <tbody>
+        <tr><td>Document title</td><td>A descriptive title in File → Info → Properties</td><td>Check manually; a preflight can flag a missing title.</td></tr>
+        <tr><td>Language</td><td>Default language set; foreign phrases marked</td><td>Review → Language.</td></tr>
+        <tr><td>Headings</td><td>Real Heading 1/2/3 styles, in order</td><td>Navigation pane; do not use bold text as a heading.</td></tr>
+        <tr><td>Images</td><td>Purpose-based alt text; decorative images marked</td><td>Right-click → Edit Alt Text.</td></tr>
+        <tr><td>Tables</td><td>Header row; repeated header row; simple grid</td><td>Table Layout → Repeat Header Rows.</td></tr>
+        <tr><td>Links</td><td>Descriptive text, not “click here”</td><td>Review every link in context.</td></tr>
+        <tr><td>Text boxes</td><td>Reading order is sensible</td><td>Screen-reader test; move content into the main flow if needed.</td></tr>
+        <tr><td>Tracked changes/comments</td><td>Accepted/resolved before publishing</td><td>Review → Track Changes / Comments.</td></tr>
+      </tbody>
+    </table>
+
+    <h2>2. PowerPoint (PPTX) checklist</h2>
+    <ul>
+      <li>Every slide has a unique title in the <strong>Title placeholder</strong>.</li>
+      <li>Reading order in the <strong>Selection Pane</strong> matches the intended order.</li>
+      <li>Pictures, charts, and groups have purpose-based alt text.</li>
+      <li>Tables have <strong>Header Row</strong> enabled.</li>
+      <li>No hidden slides in the published deck.</li>
+      <li>Embedded audio/video has captions and a transcript.</li>
+      <li>Body text is at least 12 pt; contrast meets WCAG AA.</li>
+    </ul>
+
+    <h2>3. PDF checklist</h2>
+    <p>A DOCX/PPTX preflight does not make the exported PDF accessible. If the PDF is the deliverable, check separately:</p>
+    <ul>
+      <li>Tagged PDF, with a logical reading order.</li>
+      <li>Alt text for figures and charts.</li>
+      <li>Bookmarks/outline for long documents.</li>
+      <li>Table headers and scope.</li>
+      <li>Form field labels and tab order.</li>
+      <li>OCR for scanned pages; no image-only text.</li>
+      <li>Document title and language in the PDF properties.</li>
+    </ul>
+
+    <h2>4. What automation can and cannot do</h2>
+    <table>
+      <thead><tr><th>Can detect</th><th>Cannot verify</th></tr></thead>
+      <tbody>
+        <tr><td>Missing title/language, heading structure, missing alt text, table header setting, ambiguous link text, text boxes, hidden slides, tiny text, comments/tracked changes, media presence</td><td>Whether alt text is meaningful; reading order in a real screen reader; contrast on complex backgrounds; caption accuracy; pedagogical clarity; PDF tags/reading order</td></tr>
+      </tbody>
+    </table>
+
+    <h2>5. Evidence to keep</h2>
+    <ul>
+      <li>Preflight report with date and tool version.</li>
+      <li>Manual test notes: screen reader, browser/OS, representative files.</li>
+      <li>Remediation log: file, change, owner, date.</li>
+      <li>Known limitations and exceptions.</li>
+    </ul>
+    <p>Do not label a file “508 compliant” based on a scanner. A defensible statement is narrower: “Preflighted on [date] against the listed checks; manual review completed; known limitations documented.”</p>
+
+    <div class="article-cta">
+      <h2>Preflight a DOCX or PPTX</h2>
+      <p>Free, browser-only, no upload. Use a synthetic or client-approved file first.</p>
+      <p><a href="../index.html">Open the scanner →</a></p>
+    </div>
+
+    <h2>Sources</h2>
+    <ul class="source-list">
+      <li>U.S. Access Board, <a href="https://www.access-board.gov/ict/" rel="noopener">ICT Accessibility Standards</a>.</li>
+      <li>Section508.gov, <a href="https://www.section508.gov/create/documents/" rel="noopener">Create Accessible Documents</a>.</li>
+      <li>U.S. Department of Justice, <a href="https://www.ada.gov/resources/2024-03-08-web-rule/" rel="noopener">Title II web accessibility rule fact sheet</a>.</li>
+      <li>W3C, <a href="https://www.w3.org/WAI/WCAG22/Understanding/" rel="noopener">Understanding WCAG 2.2</a>.</li>
+    </ul>
+
+    <p class="micro">Disclosure: this page is published by the maker of Preflight A11y. It is not legal advice. Scope and standards change; verify with your accessibility officer, procurement team, or counsel.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preflight A11y · research prototype · 2026</p>
+      <p><a href="../index.html">Scanner</a> · <a href="index.html">Guides</a> · <a href="../privacy.html">Privacy</a></p>
+    </div>
+  </footer>
+</body>
+</html>

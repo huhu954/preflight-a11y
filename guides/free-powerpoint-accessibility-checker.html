@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'none'; base-uri 'none'; form-action 'self'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="index, follow">
+  <title>Free PowerPoint accessibility checker: what it can and cannot find — Preflight A11y</title>
+  <meta name="description" content="What a free PowerPoint accessibility checker can detect, what it misses, and a browser-only PPTX preflight you can run without uploading the file.">
+  <link rel="canonical" href="https://huhu954.github.io/preflight-a11y/guides/free-powerpoint-accessibility-checker.html">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../index.html" aria-label="Preflight A11y home"><span class="brand-mark" aria-hidden="true">PA</span><span>Preflight A11y</span></a>
+      <nav aria-label="Main">
+        <a href="../index.html#how">How it works</a>
+        <a href="index.html" aria-current="page">Guides</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="https://github.com/huhu954/preflight-a11y" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="shell article-wrap article">
+    <p class="kicker">Free PowerPoint checker</p>
+    <h1>Free PowerPoint accessibility checker: what it can and cannot find</h1>
+    <p class="article-meta">By Preflight A11y · 29 October 2026 · 6 minute read</p>
+
+    <p>If you search for a “free PowerPoint accessibility checker”, you will find three kinds of tools: the built-in Microsoft Accessibility Checker, browser-based scanners, and add-ins that overlay a toolbar on the slides. They are not equivalent.</p>
+
+    <p>This page explains what a free checker can realistically detect in a PPTX file, what needs a person, and how to run a browser-only preflight without uploading your deck.</p>
+
+    <div class="callout">
+      <p><strong>Short version:</strong> free checkers are good at presence/structure checks (titles, alt text present, table headers, empty links). They are weak at meaning, reading order, contrast in context, and screen-reader experience. A clean report is not a certificate.</p>
+    </div>
+
+    <h2>What a free PPTX checker can detect</h2>
+    <table>
+      <thead><tr><th>Check</th><th>Usually automatable?</th><th>What “pass” means</th></tr></thead>
+      <tbody>
+        <tr><td>Slide has a title</td><td>Yes</td><td>A title placeholder contains text, not just a text box.</td></tr>
+        <tr><td>Duplicate slide titles</td><td>Yes</td><td>Each slide has a distinct title.</td></tr>
+        <tr><td>Picture/chart has alt text</td><td>Yes, presence only</td><td>A non-empty description exists; quality still needs review.</td></tr>
+        <tr><td>Table has a header row</td><td>Yes</td><td>The table’s Header Row option is on.</td></tr>
+        <tr><td>Links have meaningful text</td><td>Partly</td><td>No empty/“click here” text; context still matters.</td></tr>
+        <tr><td>Hidden slides</td><td>Yes</td><td>No hidden slides in the published deck.</td></tr>
+        <tr><td>Tiny text</td><td>Yes, below a threshold</td><td>Body text is at least 12 pt; 9 pt only for sources.</td></tr>
+        <tr><td>Embedded media needs captions</td><td>Detection only</td><td>Media exists; captions/transcript must be checked manually.</td></tr>
+      </tbody>
+    </table>
+
+    <h2>What free checkers usually miss</h2>
+    <ul>
+      <li><strong>Whether alt text is meaningful.</strong> “Chart” or “image1.png” may pass a presence check and fail a learner.</li>
+      <li><strong>Reading order.</strong> Screen readers follow object order, not visual position. A checker can flag a likely mismatch, but a person must verify it in the Selection Pane and with a screen reader.</li>
+      <li><strong>Contrast in context.</strong> A checker can sample colors, but gradients, images behind text, and theme variations need review.</li>
+      <li><strong>Chart data.</strong> The alt text should convey the takeaway, not just the chart type.</li>
+      <li><strong>Caption quality.</strong> Auto-captions may miss names, acronyms, and technical vocabulary.</li>
+      <li><strong>Whether the deck makes sense.</strong> No tool can judge pedagogical clarity.</li>
+    </ul>
+
+    <h2>Free options compared</h2>
+    <table>
+      <thead><tr><th>Option</th><th>Cost</th><th>Strength</th><th>Limit</th></tr></thead>
+      <tbody>
+        <tr><td>Microsoft Accessibility Checker</td><td>Free with Microsoft 365/Office</td><td>Integrated into PowerPoint; recommended actions</td><td>A pane, not a client-ready report; no meaning/reading-order verification</td></tr>
+        <tr><td>Preflight A11y (this site)</td><td>Free research preview</td><td>Browser-only PPTX preflight, severity, WCAG references, downloadable HTML report</td><td>Not a certification; no remediation; no PDF; no cloud AI</td></tr>
+        <tr><td>Online “scan your site” tools</td><td>Free/paid tiers</td><td>Useful for web pages</td><td>They do not inspect a PPTX file</td></tr>
+        <tr><td>Overlay widgets</td><td>Paid</td><td>Adds a toolbar to a website</td><td>Does not fix the slide file or its reading order</td></tr>
+      </tbody>
+    </table>
+
+    <h2>How to run the free browser preflight</h2>
+    <ol>
+      <li>Open <a href="../index.html">the scanner</a>.</li>
+      <li>Choose a <code>.pptx</code> file (≤15 MB). The file is parsed in your browser; it is not uploaded.</li>
+      <li>Check the consent box and run the preflight.</li>
+      <li>Review critical/serious findings first, then download the HTML report.</li>
+      <li>Do a manual pass: Selection Pane order, screen reader, captions, contrast, and whether alt text communicates the takeaway.</li>
+    </ol>
+
+    <div class="article-cta">
+      <h2>Run a free PPTX preflight</h2>
+      <p>No upload, no account, no payment. Use a synthetic or non-confidential deck first.</p>
+      <p><a href="../index.html">Open the scanner →</a></p>
+    </div>
+
+    <h2>Sources</h2>
+    <ul class="source-list">
+      <li>Microsoft Support, <a href="https://support.microsoft.com/en-us/accessibility/office-accessibility/improve-accessibility-with-the-accessibility-checker" rel="noopener">Improve accessibility with the Accessibility Checker</a>.</li>
+      <li>WebAIM, <a href="https://webaim.org/techniques/powerpoint/" rel="noopener">PowerPoint Accessibility</a>.</li>
+      <li>W3C, <a href="https://www.w3.org/WAI/WCAG22/Understanding/" rel="noopener">Understanding WCAG 2.2</a>.</li>
+      <li>U.S. Department of Justice, <a href="https://www.ada.gov/resources/web-guidance/" rel="noopener">Guidance on Web Accessibility and the ADA</a> (automated tools need careful use; a clean report does not guarantee accessibility).</li>
+    </ul>
+
+    <p class="micro">Disclosure: this page is published by the maker of Preflight A11y. It is not legal advice. Verify current product behaviour and standards against official documentation.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preflight A11y · research prototype · 2026</p>
+      <p><a href="../index.html">Scanner</a> · <a href="index.html">Guides</a> · <a href="../privacy.html">Privacy</a></p>
+    </div>
+  </footer>
+</body>
+</html>
