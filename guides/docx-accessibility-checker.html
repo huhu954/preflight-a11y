@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'none'; base-uri 'none'; form-action 'self'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="index, follow">
+  <title>DOCX accessibility checker: what Microsoft misses — Preflight A11y</title>
+  <meta name="description" content="Microsoft's Accessibility Checker is a useful first pass, but it is not a client-ready audit. Here are the DOCX checks to do after it, and how to run a browser-only preflight.">
+  <link rel="canonical" href="https://huhu954.github.io/preflight-a11y/guides/docx-accessibility-checker.html">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../index.html" aria-label="Preflight A11y home"><span class="brand-mark" aria-hidden="true">PA</span><span>Preflight A11y</span></a>
+      <nav aria-label="Main">
+        <a href="../index.html#how">How it works</a>
+        <a href="index.html" aria-current="page">Guides</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="https://github.com/huhu954/preflight-a11y" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="shell article-wrap article">
+    <p class="kicker">DOCX accessibility</p>
+    <h1>DOCX accessibility checker: what Microsoft misses</h1>
+    <p class="article-meta">By Preflight A11y · 29 October 2026 · 7 minute read</p>
+
+    <p>Microsoft's Accessibility Checker is the first tool most course teams open. It is free, built into Word, and it catches several real problems before a document is published. But it is a pane inside Word, not an audit report, and it cannot tell you whether the alt text actually makes sense.</p>
+
+    <p>This guide covers what the built-in checker does well, the DOCX checks that still need a person or a second tool, and how to produce a report you can hand to a client or an instructional designer.</p>
+
+    <div class="callout">
+      <p><strong>Short version:</strong> use the Microsoft checker as a first pass, then verify structure, reading order, alt-text quality, table headers, links, and tracked changes. A clean automated report is not proof of WCAG conformance.</p>
+    </div>
+
+    <h2>What the built-in checker is good at</h2>
+    <p>Microsoft documents the Accessibility Checker for Word, PowerPoint, Excel, Outlook, and OneNote. In Word it flags items such as missing alternative text, missing table header rows, merged or split cells, and some heading issues, with a “Recommended Actions” list. For a quick pass before sharing a draft, that is useful.</p>
+
+    <p>Its limits are structural:</p>
+    <ul>
+      <li><strong>It is a pane, not a portfolio report.</strong> You cannot hand a client a consistent PDF/HTML report with severity, WCAG references, and a remediation plan.</li>
+      <li><strong>It cannot judge meaning.</strong> Alt text like “image1.png” or “graphic” may pass a presence check but fail a screen-reader user.</li>
+      <li><strong>Reading order is hard to verify.</strong> Floating text boxes can be read in a different order than they appear.</li>
+      <li><strong>It does not test the experience.</strong> Screen-reader pronunciation, keyboard order, and whether a table makes sense are manual checks.</li>
+    </ul>
+
+    <h2>Seven DOCX checks to do after the built-in checker</h2>
+
+    <h3>1. Set a real document title</h3>
+    <p>Go to <strong>File → Info → Properties → Title</strong>. Use a short, descriptive title, not the file name. A title helps screen-reader users and navigation tools identify the document. The WCAG reference is <a href="https://www.w3.org/WAI/WCAG22/Understanding/page-titled.html" rel="noopener">2.4.2 Page Titled</a>.</p>
+
+    <h3>2. Set the document language</h3>
+    <p>Use <strong>Review → Language → Set Proofing Language</strong> and set the default for the document. If the document is mostly English but contains a French quotation, mark the quotation separately. The reference is <a href="https://www.w3.org/WAI/WCAG22/Understanding/language-of-page.html" rel="noopener">3.1.1 Language of Page</a>.</p>
+
+    <h3>3. Use real heading styles, in order</h3>
+    <p>Select the document title and apply <strong>Heading 1</strong>; use <strong>Heading 2</strong> for sections and <strong>Heading 3</strong> for subsections. Do not use bold body text as a fake heading. A screen-reader user can jump by heading; a bold paragraph is invisible to that navigation. See <a href="https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html" rel="noopener">1.3.1 Info and Relationships</a>.</p>
+
+    <h3>4. Write alt text for purpose, not pixels</h3>
+    <p>Right-click the image → <strong>Edit Alt Text</strong>. Describe what the image communicates in this context, in one or two sentences. A decorative divider should be marked decorative, not described. A chart needs the takeaway (“Enrollment rose 18% from 2024 to 2025”), not “chart”. The reference is <a href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html" rel="noopener">1.1.1 Non-text Content</a>.</p>
+
+    <h3>5. Give data tables a header row and repeat it</h3>
+    <p>Select the header row → <strong>Table Layout → Repeat Header Rows</strong>. Keep the table simple; merged cells make it harder for screen readers to associate values with headers. If the table is only for layout, use a real layout, not a data table.</p>
+
+    <h3>6. Make link text descriptive</h3>
+    <p>“Click here” and “read more” fail when a screen-reader user navigates link-to-link. Use the destination or action: “Download the grading rubric (PDF)”. The reference is <a href="https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context.html" rel="noopener">2.4.4 Link Purpose (In Context)</a>.</p>
+
+    <h3>7. Check text boxes, tracked changes, and comments</h3>
+    <p>Floating text boxes can break reading order. Accept or reject tracked changes before publishing, and delete internal comments. Both can expose draft content or make the reading experience inconsistent.</p>
+
+    <h2>What a “client-ready” report should contain</h2>
+    <table>
+      <thead><tr><th>Field</th><th>Why it matters</th></tr></thead>
+      <tbody>
+        <tr><td>Severity</td><td>Lets the client fix critical barriers first instead of a flat list.</td></tr>
+        <tr><td>Location</td><td>“Picture 3, slide 7” is actionable; “images” is not.</td></tr>
+        <tr><td>WCAG reference</td><td>Connects the fix to a standard, without claiming certification.</td></tr>
+        <tr><td>Plain-English impact</td><td>Helps a course owner understand why the fix matters.</td></tr>
+        <tr><td>Fix instruction</td><td>Word/PowerPoint menu path, not a vague “add alt text”.</td></tr>
+        <tr><td>Limitations</td><td>States what automation cannot verify; protects both sides.</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Where Preflight A11y fits</h2>
+    <p><a href="../index.html">Preflight A11y</a> is a free browser-only tool that scans DOCX and PPTX files and produces that kind of report. It checks heading structure, slide titles, alt text presence and quality signals, table headers, ambiguous links, text boxes, hidden slides, tiny text, tracked changes, and comments. The file is parsed in your browser and is not uploaded.</p>
+    <p>It is deliberately a <strong>preflight</strong>, not a certification. It cannot judge whether alt text is meaningful, test screen-reader pronunciation, or remediate the file. Use it to decide what needs a human, then do a manual pass.</p>
+
+    <div class="article-cta">
+      <h2>Run a free DOCX preflight</h2>
+      <p>No upload, no account, no payment. Maximum 15 MB. Use a synthetic or non-confidential file first.</p>
+      <p><a href="../index.html">Open the scanner →</a></p>
+    </div>
+
+    <h2>Sources</h2>
+    <ul class="source-list">
+      <li>Microsoft Support, <a href="https://support.microsoft.com/en-us/accessibility/office-accessibility/improve-accessibility-with-the-accessibility-checker" rel="noopener">Improve accessibility with the Accessibility Checker</a>.</li>
+      <li>W3C, <a href="https://www.w3.org/WAI/WCAG22/Understanding/" rel="noopener">Understanding WCAG 2.2</a>.</li>
+      <li>U.S. Department of Justice, <a href="https://www.ada.gov/resources/web-guidance/" rel="noopener">Guidance on Web Accessibility and the ADA</a> (automated tools and overlays need careful use; a clean report does not guarantee accessibility).</li>
+      <li>WebAIM, <a href="https://webaim.org/projects/million/" rel="noopener">The WebAIM Million 2026</a> (web pages, not documents; useful context for how common detectable failures are).</li>
+    </ul>
+
+    <p class="micro">Disclosure: this guide is published by the maker of Preflight A11y. It is not legal advice. Standards and product behaviour change; verify against the current official documentation.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preflight A11y · research prototype · 2026</p>
+      <p><a href="../index.html">Scanner</a> · <a href="index.html">Guides</a> · <a href="../privacy.html">Privacy</a></p>
+    </div>
+  </footer>
+</body>
+</html>

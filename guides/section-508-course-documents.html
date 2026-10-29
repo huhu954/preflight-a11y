@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'none'; base-uri 'none'; form-action 'self'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="index, follow">
+  <title>Section 508 course documents: a practical preflight workflow — Preflight A11y</title>
+  <meta name="description" content="How to preflight DOCX, PPTX, and PDF course materials for Section 508 and WCAG without confusing a VPAT, an automated scan, and a real document audit.">
+  <link rel="canonical" href="https://huhu954.github.io/preflight-a11y/guides/section-508-course-documents.html">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../index.html" aria-label="Preflight A11y home"><span class="brand-mark" aria-hidden="true">PA</span><span>Preflight A11y</span></a>
+      <nav aria-label="Main">
+        <a href="../index.html#how">How it works</a>
+        <a href="index.html" aria-current="page">Guides</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="https://github.com/huhu954/preflight-a11y" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="shell article-wrap article">
+    <p class="kicker">Section 508 · course documents</p>
+    <h1>Section 508 course documents: a practical preflight workflow</h1>
+    <p class="article-meta">By Preflight A11y · 29 October 2026 · 8 minute read</p>
+
+    <p>“Is this document Section 508 compliant?” is usually asked at the worst time: a course is about to launch, a procurement package is due, or a student has already reported a barrier. The answer is rarely a single checkbox. It depends on who the document is for, which standard applies, and whether a human has tested the result.</p>
+
+    <p>This guide separates four things that often get conflated: Section 508, WCAG, a VPAT, and an automated accessibility scan. Then it gives a practical preflight workflow for DOCX, PPTX, and PDF course materials.</p>
+
+    <div class="callout">
+      <p><strong>Not legal advice.</strong> Scope depends on the organisation, funding, contract, and jurisdiction. Confirm obligations with your accessibility officer, procurement team, or counsel.</p>
+    </div>
+
+    <h2>1. Know which obligation you are actually meeting</h2>
+    <table>
+      <thead><tr><th>Term</th><th>What it is</th><th>What it is not</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Section 508</strong></td><td>A U.S. federal law requiring accessible information and communication technology for federal agencies, with standards maintained by the U.S. Access Board.</td><td>Not a universal law covering every private course or every university directly.</td></tr>
+        <tr><td><strong>WCAG</strong></td><td>W3C’s Web Content Accessibility Guidelines. The Revised 508 standards incorporate WCAG 2.0 A/AA by reference for web content; other regimes may reference WCAG 2.1 or 2.2.</td><td>Not a document format or a certification you can “pass” with a scanner.</td></tr>
+        <tr><td><strong>VPAT</strong></td><td>A Voluntary Product Accessibility Template: a vendor’s conformance report for a product.</td><td>Not a document-level audit of your course files.</td></tr>
+        <tr><td><strong>Automated scan</strong></td><td>A fast first pass that finds some detectable issues.</td><td>Not proof of conformance; it cannot judge meaning or screen-reader experience.</td></tr>
+      </tbody>
+    </table>
+
+    <p>Universities and grantees may also have obligations under Section 504 of the Rehabilitation Act and the ADA. Public entities have additional web accessibility requirements under the DOJ’s 2024 Title II rule, which uses WCAG 2.1 AA and has its own compliance dates. Check the current deadline rather than relying on a blog post.</p>
+
+    <h2>2. Inventory the actual student-facing files</h2>
+    <p>Do not start with the LMS homepage. Start with the files students must use to complete the course:</p>
+    <ul>
+      <li>Syllabus and schedule (DOCX/PDF)</li>
+      <li>Lecture slides (PPTX/PDF)</li>
+      <li>Readings and course reserves (PDF, often scanned)</li>
+      <li>Assignments, rubrics, and forms (DOCX/PDF)</li>
+      <li>Captions and transcripts for recorded lectures</li>
+      <li>Third-party tools and publisher content (procurement evidence, not just your files)</li>
+    </ul>
+    <p>Record the owner, source, format, and whether the file is current. A document that is replaced next week does not need the same remediation effort as a permanent syllabus template.</p>
+
+    <h2>3. Preflight before remediation</h2>
+    <p>A preflight is a triage step. It answers: which files have critical barriers, which are quick fixes, and which need a specialist? For DOCX and PPTX, a useful preflight checks:</p>
+    <ul>
+      <li>Document title and language</li>
+      <li>Heading structure and slide titles</li>
+      <li>Missing, generic, or duplicated alt text</li>
+      <li>Tables without header rows</li>
+      <li>Ambiguous links (“click here”)</li>
+      <li>Floating text boxes / reading-order risk</li>
+      <li>Hidden slides, tiny text, tracked changes, comments, embedded media without captions</li>
+    </ul>
+    <p>For PDFs, the checks are different: tags, reading order, alt text, bookmarks, form labels, and whether the file is a scanned image without OCR. A DOCX preflight does not tell you whether the exported PDF is accessible.</p>
+
+    <h2>4. Fix the template, not only the file</h2>
+    <p>If five syllabi have the same missing heading structure, the problem is probably the template. Fix the template and re-run the preflight on a sample. This is the difference between a one-off cleanup and a process that stays fixed.</p>
+
+    <h2>5. Do a manual pass</h2>
+    <p>Automation cannot confirm that alt text is meaningful, that the reading order makes sense, or that a screen reader pronounces the content correctly. A manual pass should include:</p>
+    <ul>
+      <li>Keyboard-only navigation of interactive content</li>
+      <li>Screen-reader spot checks on representative documents (VoiceOver, NVDA, or JAWS)</li>
+      <li>Contrast checks on the actual theme, not a screenshot</li>
+      <li>Caption/transcript review for technical vocabulary and names</li>
+      <li>A check that the PDF export preserves tags and reading order</li>
+    </ul>
+
+    <h2>6. Keep evidence, but do not overclaim</h2>
+    <p>Keep the preflight report, the manual test notes, the remediation ticket, and the date. Do not label a document “508 compliant” based on a scanner. A defensible statement is narrower: “Preflighted on [date] against the listed checks; manual review completed by [role]; known limitations documented.”</p>
+
+    <h2>Where Preflight A11y fits</h2>
+    <p><a href="../index.html">Preflight A11y</a> is a free browser-only preflight for DOCX and PPTX. It produces a scored report with severity, locations, WCAG references, and fix instructions. It is useful for the triage step and for giving an instructional designer a concrete worklist.</p>
+    <p>It does not cover PDF, does not remediate files, and does not certify Section 508 or WCAG conformance. If your deliverable is a PDF, test the PDF separately.</p>
+
+    <div class="article-cta">
+      <h2>Preflight a course document</h2>
+      <p>No upload, no account, no payment. Use a synthetic or non-confidential file for the first run.</p>
+      <p><a href="../index.html">Open the scanner →</a></p>
+    </div>
+
+    <h2>Sources</h2>
+    <ul class="source-list">
+      <li>U.S. Access Board, <a href="https://www.access-board.gov/ict/" rel="noopener">Information and Communication Technology (ICT) Accessibility Standards</a>.</li>
+      <li>Section508.gov, <a href="https://www.section508.gov/create/documents/" rel="noopener">Create Accessible Documents</a>.</li>
+      <li>U.S. Department of Justice, <a href="https://www.ada.gov/resources/2024-03-08-web-rule/" rel="noopener">Fact Sheet: New Rule on the Accessibility of Web Content and Mobile Apps</a>.</li>
+      <li>U.S. Department of Justice, <a href="https://www.ada.gov/resources/web-guidance/" rel="noopener">Guidance on Web Accessibility and the ADA</a>.</li>
+      <li>W3C, <a href="https://www.w3.org/WAI/WCAG22/Understanding/" rel="noopener">Understanding WCAG 2.2</a>.</li>
+    </ul>
+
+    <p class="micro">Disclosure: this guide is published by the maker of Preflight A11y. It is not legal advice. Standards, deadlines, and procurement rules change; verify against current official sources.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preflight A11y · research prototype · 2026</p>
+      <p><a href="../index.html">Scanner</a> · <a href="index.html">Guides</a> · <a href="../privacy.html">Privacy</a></p>
+    </div>
+  </footer>
+</body>
+</html>

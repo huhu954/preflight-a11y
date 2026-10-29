@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'none'; base-uri 'none'; form-action 'self'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="index, follow">
+  <title>PowerPoint accessibility checklist for course slides — Preflight A11y</title>
+  <meta name="description" content="A practical PowerPoint accessibility checklist: slide titles, alt text, table headers, reading order, hidden slides, captions, and the limits of export-to-PDF.">
+  <link rel="canonical" href="https://huhu954.github.io/preflight-a11y/guides/powerpoint-accessibility-checklist.html">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../index.html" aria-label="Preflight A11y home"><span class="brand-mark" aria-hidden="true">PA</span><span>Preflight A11y</span></a>
+      <nav aria-label="Main">
+        <a href="../index.html#how">How it works</a>
+        <a href="index.html" aria-current="page">Guides</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="https://github.com/huhu954/preflight-a11y" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="shell article-wrap article">
+    <p class="kicker">PowerPoint accessibility</p>
+    <h1>PowerPoint accessibility checklist for course slides</h1>
+    <p class="article-meta">By Preflight A11y · 29 October 2026 · 8 minute read</p>
+
+    <p>Slide decks are where accessibility work often gets skipped. A deck looks fine in presentation mode, but a screen-reader user may hear objects in the wrong order, miss the chart’s message, or land on a slide with no title.</p>
+
+    <p>This checklist is for course teams, instructional designers, and accessibility consultants doing a first pass. It follows the same order as a practical review: structure first, then non-text content, then interaction and media.</p>
+
+    <div class="callout">
+      <p><strong>Important:</strong> a clean automated report does not prove WCAG conformance. Automated tools find some barriers; they cannot judge whether alt text is meaningful or whether the reading order makes sense to a person.</p>
+    </div>
+
+    <h2>1. Give every slide a unique title in the Title placeholder</h2>
+    <p>Use the layout’s <strong>Title</strong> placeholder, not a plain text box. Screen-reader users navigate slides by title. Duplicate titles (“Overview”, “Overview”, “Overview”) make it hard to know where you are.</p>
+    <p>If a slide is a full-bleed image, add a title that describes the slide’s message, then make the image decorative or give it alt text as appropriate. The WCAG reference is <a href="https://www.w3.org/WAI/WCAG22/Understanding/page-titled.html" rel="noopener">2.4.2 Page Titled</a>.</p>
+
+    <h2>2. Put content in a logical reading order</h2>
+    <p>Screen readers follow the object order in the file, not necessarily the visual top-to-bottom order. Open <strong>Home → Arrange → Selection Pane</strong>. Reorder objects so they read top-to-bottom, left-to-right. Decorative objects can be hidden from the reading order where the tool allows it. Then test with a screen reader.</p>
+    <p>This matters most for multi-column slides, floating callouts, and diagrams built from many text boxes. The reference is <a href="https://www.w3.org/WAI/WCAG22/Understanding/meaningful-sequence.html" rel="noopener">1.3.2 Meaningful Sequence</a>.</p>
+
+    <h2>3. Write alt text for pictures, charts, and grouped objects</h2>
+    <p>Select the object → <strong>Alt Text</strong>. Describe the takeaway, not the pixels:</p>
+    <ul>
+      <li><strong>Weak:</strong> “chart” or “screenshot”.</li>
+      <li><strong>Better:</strong> “Bar chart: completed assignments rose from 62% in week 1 to 84% in week 6.”</li>
+      <li><strong>Decorative:</strong> mark it decorative; do not make the screen reader announce a decorative flourish.</li>
+    </ul>
+    <p>Grouped objects need a group-level description or meaningful child descriptions. A group with no alt text can hide the whole diagram. See <a href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html" rel="noopener">1.1.1 Non-text Content</a>.</p>
+
+    <h2>4. Turn on table headers</h2>
+    <p>Select the table → <strong>Table Design → Header Row</strong>. Keep the header text short. Avoid merged cells where possible; a simple grid is easier for assistive technology to navigate.</p>
+    <p>If the table is only being used for layout, replace it with separate text boxes or a layout that is not a data table. The reference is <a href="https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html" rel="noopener">1.3.1 Info and Relationships</a>.</p>
+
+    <h2>5. Remove or account for hidden slides</h2>
+    <p>Hidden slides can still be exported, printed, or read by some tools. If a slide is not part of the published deck, delete it. If it must stay, confirm that the export and the LMS player exclude it.</p>
+
+    <h2>6. Caption embedded audio and video</h2>
+    <p>If the deck contains video or audio, add captions and a transcript. Auto-captions can be a starting point, but they are not sufficient for technical content, names, or accented speech without review. The reference is <a href="https://www.w3.org/WAI/WCAG22/Understanding/captions-prerecorded.html" rel="noopener">1.2.2 Captions (Prerecorded)</a>.</p>
+
+    <h2>7. Check tiny text and low-contrast text</h2>
+    <p>Small text is hard to read and may not resize cleanly. Use at least 12 pt for slide body text; 9 pt only for source notes. Check contrast with a contrast analyzer, especially for orange-on-cream or gray-on-white themes. The reference is <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html" rel="noopener">1.4.3 Contrast (Minimum)</a>.</p>
+
+    <h2>8. Do not assume “Export to PDF” fixes accessibility</h2>
+    <p>PDF has its own accessibility requirements: tags, reading order, alt text, bookmarks, and form labels. Exporting a slide deck to PDF does not automatically produce a tagged, accessible PDF. If the PDF is the deliverable, test it separately with a PDF accessibility checker and a screen reader.</p>
+
+    <h2>Quick checklist</h2>
+    <table>
+      <thead><tr><th>Check</th><th>Pass condition</th></tr></thead>
+      <tbody>
+        <tr><td>Slide title</td><td>Every slide has a unique, descriptive title in the Title placeholder.</td></tr>
+        <tr><td>Reading order</td><td>Selection Pane order matches the intended reading order.</td></tr>
+        <tr><td>Alt text</td><td>Every meaningful picture/chart has a purpose-based description; decorative objects are marked.</td></tr>
+        <tr><td>Tables</td><td>Header Row is on; header text is specific; layout tables are avoided.</td></tr>
+        <tr><td>Hidden slides</td><td>No hidden slides in the published deck, or export excludes them.</td></tr>
+        <tr><td>Media</td><td>Captions and a transcript exist and were reviewed.</td></tr>
+        <tr><td>Text size/contrast</td><td>Body text ≥12 pt; contrast meets WCAG AA.</td></tr>
+        <tr><td>PDF</td><td>If exporting, the PDF is separately tagged and tested.</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Where Preflight A11y fits</h2>
+    <p><a href="../index.html">Preflight A11y</a> scans PPTX files in your browser and flags missing slide titles, duplicate titles, missing or generic alt text, tables without header rows, ambiguous links, hidden slides, reading-order risk, tiny text, and embedded media that needs captions. It produces a scored HTML report you can use for a first pass.</p>
+    <p>It cannot judge whether alt text is meaningful, verify screen-reader pronunciation, or fix the deck. Treat it as a triage tool, not a certification.</p>
+
+    <div class="article-cta">
+      <h2>Run a free PPTX preflight</h2>
+      <p>No upload, no account, no payment. Maximum 15 MB. Try the synthetic sample first.</p>
+      <p><a href="../index.html">Open the scanner →</a></p>
+    </div>
+
+    <h2>Sources</h2>
+    <ul class="source-list">
+      <li>Microsoft Support, <a href="https://support.microsoft.com/en-us/accessibility/office-accessibility/improve-accessibility-with-the-accessibility-checker" rel="noopener">Improve accessibility with the Accessibility Checker</a>.</li>
+      <li>W3C, <a href="https://www.w3.org/WAI/WCAG22/Understanding/" rel="noopener">Understanding WCAG 2.2</a>.</li>
+      <li>WebAIM, <a href="https://webaim.org/techniques/powerpoint/" rel="noopener">PowerPoint Accessibility</a>.</li>
+    </ul>
+
+    <p class="micro">Disclosure: this guide is published by the maker of Preflight A11y. It is not legal advice. Verify menu paths and standards against the current official documentation.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preflight A11y · research prototype · 2026</p>
+      <p><a href="../index.html">Scanner</a> · <a href="index.html">Guides</a> · <a href="../privacy.html">Privacy</a></p>
+    </div>
+  </footer>
+</body>
+</html>
