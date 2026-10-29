@@ -1,5 +1,7 @@
 # Preflight A11y
 
+[![test](https://github.com/huhu954/preflight-a11y/actions/workflows/test.yml/badge.svg)](https://github.com/huhu954/preflight-a11y/actions/workflows/test.yml)
+
 **Browser-only accessibility preflight for DOCX and PPTX course documents.**
 
 Live: **https://huhu954.github.io/preflight-a11y/**
