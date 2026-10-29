@@ -15,6 +15,7 @@ Upload a Word or PowerPoint file and get a client-ready report: a 0–100 prefli
 - [DOCX accessibility checker: what Microsoft misses](https://huhu954.github.io/preflight-a11y/guides/docx-accessibility-checker.html)
 - [PowerPoint accessibility checklist](https://huhu954.github.io/preflight-a11y/guides/powerpoint-accessibility-checklist.html)
 - [Section 508 course documents: preflight workflow](https://huhu954.github.io/preflight-a11y/guides/section-508-course-documents.html)
+- [Accessibility preflight vs audit: what should you buy?](https://huhu954.github.io/preflight-a11y/guides/accessibility-preflight-vs-audit.html)
 
 ## What it checks
 
