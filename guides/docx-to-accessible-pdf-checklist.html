@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'none'; base-uri 'none'; form-action 'self'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="index, follow">
+  <title>DOCX to accessible PDF checklist: export is not enough — Preflight A11y</title>
+  <meta name="description" content="Why exporting a Word document to PDF does not make it accessible, and a practical DOCX-to-PDF checklist for tags, reading order, alt text, tables, and forms.">
+  <link rel="canonical" href="https://huhu954.github.io/preflight-a11y/guides/docx-to-accessible-pdf-checklist.html">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../index.html" aria-label="Preflight A11y home"><span class="brand-mark" aria-hidden="true">PA</span><span>Preflight A11y</span></a>
+      <nav aria-label="Main">
+        <a href="../index.html#how">How it works</a>
+        <a href="index.html" aria-current="page">Guides</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="https://github.com/huhu954/preflight-a11y" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="shell article-wrap article">
+    <p class="kicker">DOCX → PDF</p>
+    <h1>DOCX to accessible PDF checklist: export is not enough</h1>
+    <p class="article-meta">By Preflight A11y · 29 October 2026 · 6 minute read</p>
+
+    <p>“Save as PDF” does not make a document accessible. The PDF has its own structure: tags, reading order, alt text, table headers, bookmarks, and form labels. A clean Word file helps, but the export and the PDF itself still need checking.</p>
+
+    <div class="callout">
+      <p><strong>Two-stage check:</strong> first preflight the DOCX, then check the PDF separately. Do not assume the export preserved the structure.</p>
+    </div>
+
+    <h2>1. Fix the DOCX before export</h2>
+    <ul>
+      <li>Real heading styles, in order.</li>
+      <li>Document title and language set.</li>
+      <li>Alt text for meaningful images; decorative images marked.</li>
+      <li>Table header row and repeated header row.</li>
+      <li>Descriptive links.</li>
+      <li>No tracked changes or unresolved comments.</li>
+    </ul>
+    <p>A DOCX preflight can catch several of these; it cannot verify whether alt text is meaningful.</p>
+
+    <h2>2. Use the right export path</h2>
+    <p>In Word, use <strong>File → Save As → PDF</strong> and look for the option to create a tagged PDF (wording varies by version). Do not print to PDF from a browser or a generic print dialog; that can drop tags and structure.</p>
+
+    <h2>3. Check the PDF’s tags and reading order</h2>
+    <ul>
+      <li>Open the PDF in a tool that exposes tags (Acrobat, PAC, or an equivalent).</li>
+      <li>Confirm the document has a tag tree, not just page content.</li>
+      <li>Check the reading order of a multi-column page and a table.</li>
+      <li>Confirm headings are tagged as headings.</li>
+      <li>Confirm figures have alt text.</li>
+    </ul>
+
+    <h2>4. Check tables</h2>
+    <p>Header cells should be tagged as table headers, with scope. Merged cells and nested tables can make the reading order ambiguous. If the table is complex, simplify it or provide an accessible alternative.</p>
+
+    <h2>5. Check forms and links</h2>
+    <ul>
+      <li>Form fields have labels and a logical tab order.</li>
+      <li>Links have descriptive text and a visible focus state.</li>
+      <li>No empty or “click here” links.</li>
+    </ul>
+
+    <h2>6. Check scanned pages</h2>
+    <p>If the PDF is a scan, it needs OCR and a tagged reading order. An image of text is not accessible text. A scanned syllabus with a clean visual layout can still be unusable with a screen reader.</p>
+
+    <h2>7. Do a screen-reader spot check</h2>
+    <p>Open the PDF with a screen reader and navigate by headings, links, and tables. Confirm the order and labels make sense. This is the step that catches “tagged but wrong” PDFs.</p>
+
+    <h2>What Preflight A11y covers</h2>
+    <p>Preflight A11y checks DOCX and PPTX, not PDF. Use it for the first stage, then test the PDF with a PDF-specific tool and a manual pass.</p>
+
+    <div class="article-cta">
+      <h2>Preflight the source DOCX</h2>
+      <p>Free, browser-only, no upload. Then test the exported PDF separately.</p>
+      <p><a href="../index.html">Open the scanner →</a></p>
+    </div>
+
+    <h2>Sources</h2>
+    <ul class="source-list">
+      <li>Section508.gov, <a href="https://www.section508.gov/create/documents/" rel="noopener">Create Accessible Documents</a>.</li>
+      <li>W3C, <a href="https://www.w3.org/WAI/WCAG22/Understanding/" rel="noopener">Understanding WCAG 2.2</a>.</li>
+      <li>WebAIM, <a href="https://webaim.org/techniques/acrobat/" rel="noopener">PDF Accessibility</a>.</li>
+    </ul>
+
+    <p class="micro">Disclosure: this page is published by the maker of Preflight A11y. It is not legal advice. Export options and PDF tools vary by version.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preflight A11y · research prototype · 2026</p>
+      <p><a href="../index.html">Scanner</a> · <a href="index.html">Guides</a> · <a href="../privacy.html">Privacy</a></p>
+    </div>
+  </footer>
+</body>
+</html>

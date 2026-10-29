@@ -62,5 +62,19 @@
       <pubDate>Thu, 29 Oct 2026 23:15:00 +0800</pubDate>
       <description>Find missing or generic image descriptions and learn what makes alt text useful.</description>
     </item>
+    <item>
+      <title>Accessible syllabus template</title>
+      <link>https://huhu954.github.io/preflight-a11y/guides/accessible-syllabus-template.html</link>
+      <guid>https://huhu954.github.io/preflight-a11y/guides/accessible-syllabus-template.html</guid>
+      <pubDate>Thu, 29 Oct 2026 23:20:00 +0800</pubDate>
+      <description>A reusable accessible syllabus structure for Word and PDF.</description>
+    </item>
+    <item>
+      <title>DOCX to accessible PDF checklist</title>
+      <link>https://huhu954.github.io/preflight-a11y/guides/docx-to-accessible-pdf-checklist.html</link>
+      <guid>https://huhu954.github.io/preflight-a11y/guides/docx-to-accessible-pdf-checklist.html</guid>
+      <pubDate>Thu, 29 Oct 2026 23:20:00 +0800</pubDate>
+      <description>Why export is not enough, and what to check in the PDF.</description>
+    </item>
   </channel>
 </rss>
