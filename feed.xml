@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Preflight A11y — document accessibility guides</title>
+    <link>https://huhu954.github.io/preflight-a11y/guides/</link>
+    <description>Practical, source-linked guides for DOCX, PPTX, and Section 508 document accessibility.</description>
+    <language>en</language>
+    <lastBuildDate>Thu, 29 Oct 2026 23:20:00 +0800</lastBuildDate>
+    <item>
+      <title>DOCX accessibility checker: what Microsoft misses</title>
+      <link>https://huhu954.github.io/preflight-a11y/guides/docx-accessibility-checker.html</link>
+      <guid>https://huhu954.github.io/preflight-a11y/guides/docx-accessibility-checker.html</guid>
+      <pubDate>Thu, 29 Oct 2026 10:00:00 +0800</pubDate>
+      <description>What the built-in checker does well, the checks to do after it, and what a client-ready report should contain.</description>
+    </item>
+    <item>
+      <title>PowerPoint accessibility checklist for course slides</title>
+      <link>https://huhu954.github.io/preflight-a11y/guides/powerpoint-accessibility-checklist.html</link>
+      <guid>https://huhu954.github.io/preflight-a11y/guides/powerpoint-accessibility-checklist.html</guid>
+      <pubDate>Thu, 29 Oct 2026 10:00:00 +0800</pubDate>
+      <description>Slide titles, reading order, alt text, table headers, hidden slides, captions, and the export-to-PDF trap.</description>
+    </item>
+    <item>
+      <title>Section 508 course documents: a practical preflight workflow</title>
+      <link>https://huhu954.github.io/preflight-a11y/guides/section-508-course-documents.html</link>
+      <guid>https://huhu954.github.io/preflight-a11y/guides/section-508-course-documents.html</guid>
+      <pubDate>Thu, 29 Oct 2026 10:00:00 +0800</pubDate>
+      <description>Separate Section 508, WCAG, a VPAT, and an automated scan; inventory, preflight, fix the template, keep proportionate evidence.</description>
+    </item>
+    <item>
+      <title>Accessibility preflight vs audit: what should you buy?</title>
+      <link>https://huhu954.github.io/preflight-a11y/guides/accessibility-preflight-vs-audit.html</link>
+      <guid>https://huhu954.github.io/preflight-a11y/guides/accessibility-preflight-vs-audit.html</guid>
+      <pubDate>Thu, 29 Oct 2026 10:00:00 +0800</pubDate>
+      <description>Preflight, audit, remediation, certification: what each delivers, what it does not prove, and questions to ask a vendor.</description>
+    </item>
+    <item>
+      <title>Free PowerPoint accessibility checker: what it can and cannot find</title>
+      <link>https://huhu954.github.io/preflight-a11y/guides/free-powerpoint-accessibility-checker.html</link>
+      <guid>https://huhu954.github.io/preflight-a11y/guides/free-powerpoint-accessibility-checker.html</guid>
+      <pubDate>Thu, 29 Oct 2026 23:00:00 +0800</pubDate>
+      <description>What free PPTX checkers detect, what they miss, and how to run a browser-only preflight without uploading.</description>
+    </item>
+    <item>
+      <title>Section 508 document checklist: Word, PowerPoint, PDF</title>
+      <link>https://huhu954.github.io/preflight-a11y/guides/section-508-document-checklist.html</link>
+      <guid>https://huhu954.github.io/preflight-a11y/guides/section-508-document-checklist.html</guid>
+      <pubDate>Thu, 29 Oct 2026 23:00:00 +0800</pubDate>
+      <description>A practical checklist, with the automation/manual boundary and the evidence to keep.</description>
+    </item>
+    <item>
+      <title>Word table header row accessibility</title>
+      <link>https://huhu954.github.io/preflight-a11y/guides/word-table-header-accessibility.html</link>
+      <guid>https://huhu954.github.io/preflight-a11y/guides/word-table-header-accessibility.html</guid>
+      <pubDate>Thu, 29 Oct 2026 23:15:00 +0800</pubDate>
+      <description>Set a header row, repeat it across pages, avoid merged cells, and know what a DOCX checker can verify.</description>
+    </item>
+    <item>
+      <title>DOCX alt text checker</title>
+      <link>https://huhu954.github.io/preflight-a11y/guides/docx-alt-text-checker.html</link>
+      <guid>https://huhu954.github.io/preflight-a11y/guides/docx-alt-text-checker.html</guid>
+      <pubDate>Thu, 29 Oct 2026 23:15:00 +0800</pubDate>
+      <description>Find missing or generic image descriptions and learn what makes alt text useful.</description>
+    </item>
+  </channel>
+</rss>

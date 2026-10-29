@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://huhu954.github.io/preflight-a11y/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://huhu954.github.io/preflight-a11y/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://huhu954.github.io/preflight-a11y/guides/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://huhu954.github.io/preflight-a11y/guides/docx-accessibility-checker.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://huhu954.github.io/preflight-a11y/guides/powerpoint-accessibility-checklist.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://huhu954.github.io/preflight-a11y/guides/section-508-course-documents.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://huhu954.github.io/preflight-a11y/guides/accessibility-preflight-vs-audit.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://huhu954.github.io/preflight-a11y/agencies.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://huhu954.github.io/preflight-a11y/guides/free-powerpoint-accessibility-checker.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://huhu954.github.io/preflight-a11y/guides/section-508-document-checklist.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://huhu954.github.io/preflight-a11y/guides/word-table-header-accessibility.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://huhu954.github.io/preflight-a11y/guides/docx-alt-text-checker.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://huhu954.github.io/preflight-a11y/</loc><lastmod>2026-10-29</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://huhu954.github.io/preflight-a11y/privacy.html</loc><lastmod>2026-10-29</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://huhu954.github.io/preflight-a11y/guides/</loc><lastmod>2026-10-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://huhu954.github.io/preflight-a11y/guides/docx-accessibility-checker.html</loc><lastmod>2026-10-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://huhu954.github.io/preflight-a11y/guides/powerpoint-accessibility-checklist.html</loc><lastmod>2026-10-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://huhu954.github.io/preflight-a11y/guides/section-508-course-documents.html</loc><lastmod>2026-10-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://huhu954.github.io/preflight-a11y/guides/accessibility-preflight-vs-audit.html</loc><lastmod>2026-10-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://huhu954.github.io/preflight-a11y/agencies.html</loc><lastmod>2026-10-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://huhu954.github.io/preflight-a11y/guides/free-powerpoint-accessibility-checker.html</loc><lastmod>2026-10-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://huhu954.github.io/preflight-a11y/guides/section-508-document-checklist.html</loc><lastmod>2026-10-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://huhu954.github.io/preflight-a11y/guides/word-table-header-accessibility.html</loc><lastmod>2026-10-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://huhu954.github.io/preflight-a11y/guides/docx-alt-text-checker.html</loc><lastmod>2026-10-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
