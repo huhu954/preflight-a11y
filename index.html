@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://huhu954.github.io/preflight-a11y/">
+  <meta name="description" content="Free DOCX and PPTX accessibility preflight for course teams. Find missing alt text, broken heading structure, table headers and more. Runs entirely in your browser.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Preflight A11y — document accessibility preflight">
+  <meta property="og:description" content="Upload a DOCX or PPTX and get a client-ready accessibility preflight report. Browser-only, no upload.">
+  <meta property="og:url" content="https://huhu954.github.io/preflight-a11y/">
+  <meta property="og:image" content="https://huhu954.github.io/preflight-a11y/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Preflight A11y","applicationCategory":"BusinessApplication","operatingSystem":"Any (browser)","description":"Browser-only accessibility preflight for DOCX and PPTX course documents.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://huhu954.github.io/preflight-a11y/"}
+  </script>
+  <title>Preflight A11y — Document accessibility preflight for course teams</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html" aria-label="Preflight A11y home">
+        <span class="brand-mark" aria-hidden="true">PA</span>
+        <span>Preflight A11y</span>
+      </a>
+      <nav aria-label="Main">
+        <a href="#how">How it works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="https://github.com/huhu954/preflight-a11y" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <p class="kicker">For accessibility consultants &amp; course teams</p>
+        <h1>Catch accessibility issues before your course ships.</h1>
+        <p class="lede">Upload a Word or PowerPoint file. Get a client-ready preflight report in under a minute: what is broken, why it matters, and how to fix it.</p>
+        <ul class="hero-points">
+          <li>DOCX and PPTX, checked against WCAG 2.1/2.2 references</li>
+          <li>Prioritised findings, not a 200-page raw scan</li>
+          <li>Files never leave your device</li>
+        </ul>
+        <p class="hero-note">Free browser-only preview. No upload. No account. No payment enabled yet.</p>
+      </div>
+
+      <div class="scan-card" id="scan">
+        <div class="card-head">
+          <h2>Run a free preflight</h2>
+          <p>Runs entirely in your browser. Max 15 MB.</p>
+        </div>
+
+        <form id="scan-form" novalidate>
+          <div class="dropzone" id="dropzone">
+            <input type="file" id="file" name="file" accept=".docx,.pptx,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.presentationml.presentation" hidden>
+            <p class="drop-title">Drop a .docx or .pptx here</p>
+            <p class="drop-sub">or</p>
+            <button type="button" class="btn btn-secondary" id="choose-file">Choose a file</button>
+            <p class="file-name" id="file-name" aria-live="polite">No file selected.</p>
+          </div>
+
+          <div class="consent-row">
+            <input type="checkbox" id="consent" name="consent">
+            <label for="consent">I have the right to scan this file. It is processed locally and never uploaded.</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary" id="scan-button">Run free preflight</button>
+          <p class="micro">Your file is read locally in this tab. It is never sent to a server. Do not scan student records, ID documents, or material you do not own.</p>
+        </form>
+
+        <div class="status" id="status" role="status" aria-live="polite"></div>
+
+        <div class="sample-row">
+          <span>Need a test file?</span>
+          <a href="samples/bad.docx" download data-sample="docx">Sample DOCX</a>
+          <a href="samples/bad.pptx" download data-sample="pptx">Sample PPTX</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="results shell" id="results" hidden aria-labelledby="results-title">
+      <div class="results-head">
+        <div>
+          <p class="kicker">Preflight report</p>
+          <h2 id="results-title">Your results</h2>
+          <p class="results-file" id="results-file"></p>
+        </div>
+        <div class="results-actions">
+          <button type="button" class="btn btn-secondary" id="download-report">Download HTML report</button>
+          <button type="button" class="btn btn-ghost" id="scan-another">Scan another file</button>
+        </div>
+      </div>
+
+      <div class="score-grid">
+        <div class="score-panel">
+          <p class="score-label">Preflight score</p>
+          <p class="score-value"><span id="score">—</span><span class="score-max">/100</span></p>
+          <p class="score-grade" id="grade">—</p>
+          <div class="score-bar" role="img" aria-label="Score bar"><span id="score-bar-fill"></span></div>
+          <p class="score-note">A sorting aid, not a compliance certificate.</p>
+        </div>
+        <div class="count-grid">
+          <div class="count-card critical"><span id="count-critical">0</span><small>Critical</small></div>
+          <div class="count-card serious"><span id="count-serious">0</span><small>Serious</small></div>
+          <div class="count-card moderate"><span id="count-moderate">0</span><small>Moderate</small></div>
+          <div class="count-card minor"><span id="count-minor">0</span><small>Minor</small></div>
+        </div>
+      </div>
+
+      <div class="ai-panel" id="ai-panel">
+        <div class="ai-head">
+          <h3>What this means</h3>
+          <span class="ai-badge" id="ai-badge">AI summary</span>
+        </div>
+        <p id="ai-summary"></p>
+        <h4>Do these first</h4>
+        <ol id="ai-priorities"></ol>
+        <p class="ai-limits" id="ai-limits"></p>
+      </div>
+
+      <div class="issues-head">
+        <h3>Findings <span id="issue-total"></span></h3>
+        <div class="filters" role="group" aria-label="Filter findings by severity">
+          <button type="button" class="filter is-active" data-filter="all">All</button>
+          <button type="button" class="filter" data-filter="critical">Critical</button>
+          <button type="button" class="filter" data-filter="serious">Serious</button>
+          <button type="button" class="filter" data-filter="moderate">Moderate</button>
+          <button type="button" class="filter" data-filter="minor">Minor</button>
+        </div>
+      </div>
+
+      <div class="issue-list" id="issue-list"></div>
+      <p class="empty" id="empty-filter" hidden>No findings in this severity group.</p>
+    </section>
+
+    <section class="band" id="how">
+      <div class="shell">
+        <p class="kicker">What it checks</p>
+        <h2>Built for the first pass, not the final sign-off.</h2>
+        <div class="three-col">
+          <article>
+            <h3>Structure</h3>
+            <p>Headings, slide titles, duplicate titles, missing document language, text boxes, hidden slides.</p>
+          </article>
+          <article>
+            <h3>Non-text content</h3>
+            <p>Missing or generic alt text on pictures, charts, grouped objects, and embedded media.</p>
+          </article>
+          <article>
+            <h3>Interaction &amp; data</h3>
+            <p>Ambiguous links, tables without header rows, tiny text, tracked changes, and comments.</p>
+          </article>
+        </div>
+        <div class="limits">
+          <h3>What it cannot do</h3>
+          <p>It cannot certify WCAG/ADA/EAA compliance, judge whether alt text is meaningful, test screen-reader pronunciation, or remediate the file. A manual review is still required. This is not legal advice.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="shell pricing" id="pricing">
+      <div>
+        <p class="kicker">Pricing (not open yet)</p>
+        <h2>Free while we validate.</h2>
+        <p class="lede">Payment is deliberately disabled until the merchant account is approved. If the pilot is useful, the planned test price is $19 per report or $49 for five files. No subscription is required.</p>
+      </div>
+      <div class="pricing-card">
+        <p class="price">$0</p>
+        <p class="price-sub">during the research pilot</p>
+        <ul>
+          <li>One DOCX or PPTX per scan</li>
+          <li>Client-ready HTML report</li>
+          <li>No account, no stored file</li>
+          <li>Email only if you opt in</li>
+        </ul>
+        <a class="btn btn-primary" href="https://github.com/huhu954/preflight-a11y/issues/new?labels=feedback&title=Preflight%20feedback" rel="noopener">Give feedback on GitHub</a>
+      </div>
+    </section>
+
+    <section class="band" id="feedback">
+      <div class="shell feedback">
+        <div>
+          <p class="kicker">Feedback / pilot</p>
+          <h2>This is a free preview. Paid plans are not open.</h2>
+          <p>If you want a paid report, a white-label version for your agency, or a manual review, open a GitHub issue. Please do not include student records or confidential documents in a public issue.</p>
+        </div>
+        <div class="feedback-actions">
+          <a class="btn btn-primary" href="https://github.com/huhu954/preflight-a11y/issues/new?labels=feedback&title=Preflight%20feedback" rel="noopener">Open a feedback issue</a>
+          <a class="btn btn-secondary" href="https://github.com/huhu954/preflight-a11y" rel="noopener">View the source</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preflight A11y · research prototype · 2026</p>
+      <p><a href="privacy.html">Privacy &amp; data handling</a> · <a href="#how">Limitations</a></p>
+    </div>
+  </footer>
+
+  <script src="dist/app.js" defer></script>
+</body>
+</html>

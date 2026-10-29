@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+  <title>Privacy &amp; data handling — Preflight A11y</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">PA</span><span>Preflight A11y</span></a>
+      <nav aria-label="Main"><a href="index.html">Home</a><a href="index.html#pricing">Pricing</a><a href="https://github.com/huhu954/preflight-a11y" rel="noopener">GitHub</a></nav>
+    </div>
+  </header>
+
+  <main id="main" class="shell" style="max-width: 820px; padding: 56px 0 80px;">
+    <p class="kicker">Privacy &amp; data handling</p>
+    <h1 style="max-width: 18ch;">Your file never leaves your browser.</h1>
+    <p class="lede">This is a static, browser-only research preview. There is no upload endpoint and no server-side storage. It is not a production service and it does not provide legal advice.</p>
+
+    <h2>1. Files you scan</h2>
+    <ul>
+      <li>The DOCX/PPTX is read with JavaScript in this tab using the File API and JSZip.</li>
+      <li>It is not sent to this website, to GitHub, or to any third-party AI API.</li>
+      <li>No copy is stored in the browser after the tab is closed; the report exists only in memory until you download it.</li>
+      <li>Do not scan student records, identity documents, medical data, or material you do not have the right to process.</li>
+    </ul>
+
+    <h2>2. No AI API calls</h2>
+    <ul>
+      <li>This static build uses a rules engine, not a cloud LLM. The summary is generated from the detected findings.</li>
+      <li>The separate local Python build can use a local Ollama model; it is not part of this public static site.</li>
+      <li>No document text is sent to OpenAI, Google, Anthropic, or any other provider.</li>
+    </ul>
+
+    <h2>3. What is collected</h2>
+    <ul>
+      <li><strong>No analytics, no cookies, no fingerprinting, no server logs.</strong></li>
+      <li>GitHub Pages may process standard technical request data (IP address, user agent) to serve the page; that is governed by GitHub's privacy statement, not by this app.</li>
+      <li>If you open a GitHub issue, GitHub stores your public issue content. Do not put confidential documents or personal data in a public issue.</li>
+    </ul>
+
+    <h2>4. Retention</h2>
+    <ul>
+      <li>Files: not retained; processed in memory only.</li>
+      <li>Reports: not retained; downloaded to your device at your request.</li>
+      <li>No waitlist or email database exists in this static build.</li>
+    </ul>
+
+    <h2>5. Your rights</h2>
+    <p>This static preview does not intentionally collect personal data. If you are in the EU/UK and believe a GitHub issue you opened contains personal data, you can edit or delete that issue in GitHub. For questions about the project, use the public GitHub repository.</p>
+
+    <h2>6. Security</h2>
+    <p>The app runs in your browser with no backend. File-size, ZIP-count and XML-entity checks reduce unsafe input. It has not been penetration-tested. Do not treat it as a confidential document portal.</p>
+
+    <h2>7. What this report is not</h2>
+    <p>It is an automated preflight, not a certification, audit opinion, or legal advice. It cannot establish WCAG, ADA, EAA, or Section 508 compliance. A qualified human must review the document and its context.</p>
+
+    <p class="micro">Last updated: 2026-10-29. This page is a plain-language notice for a research prototype, not a substitute for a lawyer-reviewed privacy policy.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Preflight A11y · browser-only preview · 2026</p>
+      <p><a href="index.html">Back to the scanner</a> · <a href="https://github.com/huhu954/preflight-a11y" rel="noopener">Source</a></p>
+    </div>
+  </footer>
+</body>
+</html>

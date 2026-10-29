@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://huhu954.github.io/preflight-a11y/sitemap.xml
