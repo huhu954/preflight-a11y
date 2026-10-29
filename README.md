@@ -8,6 +8,12 @@ Upload a Word or PowerPoint file and get a client-ready report: a 0–100 prefli
 
 ![Preflight A11y landing page](og.png)
 
+## Guides
+
+- [DOCX accessibility checker: what Microsoft misses](https://huhu954.github.io/preflight-a11y/guides/docx-accessibility-checker.html)
+- [PowerPoint accessibility checklist](https://huhu954.github.io/preflight-a11y/guides/powerpoint-accessibility-checklist.html)
+- [Section 508 course documents: preflight workflow](https://huhu954.github.io/preflight-a11y/guides/section-508-course-documents.html)
+
 ## What it checks
 
 - Heading structure and slide titles
