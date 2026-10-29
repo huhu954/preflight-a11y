@@ -6,6 +6,8 @@
 
 Live: **https://huhu954.github.io/preflight-a11y/**
 
+For accessibility agencies: **https://huhu954.github.io/preflight-a11y/agencies.html**
+
 Upload a Word or PowerPoint file and get a client-ready report: a 0–100 preflight score, findings grouped by severity, WCAG references, plain-English fixes, and a downloadable HTML report. The file is parsed in your browser with JSZip and a rules engine. **It is never uploaded to a server.**
 
 ![Preflight A11y landing page](og.png)
