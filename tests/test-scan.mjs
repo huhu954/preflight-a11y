@@ -10,7 +10,7 @@ const cases = [
 ];
 
 for (const item of cases) {
-  const data = fs.readFileSync(`../mvp/tests/fixtures/${item.name}`);
+  const data = fs.readFileSync(`tests/fixtures/${item.name}`);
   const report = await scanFile(new File([data], item.name));
   assert.equal(report.score, item.score, `${item.name} score`);
   assert.deepEqual(report.issues.map((i) => i.id), item.ids, `${item.name} issue ids`);
